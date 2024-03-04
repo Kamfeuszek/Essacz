@@ -14,4 +14,12 @@ class MainActivity : AppCompatActivity() {
         var displaytext : TextView = findViewById(R.id.textView1)
         displaytext.setText("Hello World")
     }
+    fun click2(view: View) {
+        var displaytext : TextView = findViewById(R.id.textView1)
+        displaytext.setText("Kamil Florczak")
+    }
+    fun click3(view: View) {
+        var displaytext : TextView = findViewById(R.id.textView1)
+        displaytext.setText("Goodbye")
+    }
 }

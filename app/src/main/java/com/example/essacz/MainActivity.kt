@@ -6,7 +6,9 @@ import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-
+import javax.script.ScriptEngine
+import javax.script.ScriptEngineManager
+import javax.script.ScriptException
 class MainActivity : AppCompatActivity() {
     private lateinit var expression:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,24 +65,49 @@ class MainActivity : AppCompatActivity() {
         expressionText(str)
     }
     fun button11(view: View) {
-        val str = expression.text.toString() + "+"
-        expressionText(str)
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().isEmpty()) {
+        } else {
+            val str = expression.text.toString() + "+"
+            expressionText(str)
+        }
     }
     fun button12(view: View) {
-        val str = expression.text.toString() + "-"
-        expressionText(str)
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        } else {
+            val str = expression.text.toString() + "-"
+            expressionText(str)
+        }
     }
     fun button13(view: View) {
-        val str = expression.text.toString() + "*"
-        expressionText(str)
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        } else {
+            val str = expression.text.toString() + "*"
+            expressionText(str)
+        }
     }
     fun button14(view: View) {
-        val str = expression.text.toString() + "/"
-        expressionText(str)
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        } else {
+            val str = expression.text.toString() + "/"
+            expressionText(str)
+        }
     }
     fun button15(view: View) {
-        val str = expression.text.toString() + "="
-        expressionText(str)
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        } else {
+            val str = expression.text.toString()
+            val engine:ScriptEngine = ScriptEngineManager().getEngineByName("rhino")
+            try {
+                val res = engine.eval(str)
+                if(res.toString().endsWith(".0")) {
+                    expression.text = res.toString().replace(".0","")
+                } else {
+                    expression.text = "$res"
+                }
+            } catch (e:Exception) {
+                expression.text = expression.text.toString()
+            }
+        }
     }
 
 }

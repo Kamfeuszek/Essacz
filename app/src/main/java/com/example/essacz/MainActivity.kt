@@ -25,75 +25,105 @@ class MainActivity : AppCompatActivity() {
         expression.setText("")
     }
     fun button0(view: View) {
+        if(expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
         val str = expression.text.toString() + "0"
         expressionText(str)
+        }
     }
     fun button1(view: View) {
-        val str = expression.text.toString() + "1"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "1"
+            expressionText(str)
+        }
     }
     fun button2(view: View) {
-        val str = expression.text.toString() + "2"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "2"
+            expressionText(str)
+        }
     }
     fun button3(view: View) {
-        val str = expression.text.toString() + "3"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "3"
+            expressionText(str)
+        }
     }
     fun button4(view: View) {
-        val str = expression.text.toString() + "4"
-        expressionText(str)
+        if(expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "4"
+            expressionText(str)
+        }
     }
     fun button5(view: View) {
-        val str = expression.text.toString() + "5"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "5"
+            expressionText(str)
+        }
     }
     fun button6(view: View) {
-        val str = expression.text.toString() + "6"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "6"
+            expressionText(str)
+        }
     }
     fun button7(view: View) {
-        val str = expression.text.toString() + "7"
-        expressionText(str)
+        if (expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "7"
+            expressionText(str)
+        }
     }
     fun button8(view: View) {
-        val str = expression.text.toString() + "8"
-        expressionText(str)
+        if(expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
+            val str = expression.text.toString() + "8"
+            expressionText(str)
+        }
     }
     fun button9(view: View) {
+        if(expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("Infinity")) {
+        } else {
         val str = expression.text.toString() + "9"
         expressionText(str)
     }
+        }
     fun button11(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().isEmpty()) {
         } else {
             val str = expression.text.toString() + "+"
             expressionText(str)
         }
     }
     fun button12(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
         } else {
             val str = expression.text.toString() + "-"
             expressionText(str)
         }
     }
     fun button13(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
         } else {
             val str = expression.text.toString() + "*"
             expressionText(str)
         }
     }
     fun button14(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
         } else {
             val str = expression.text.toString() + "/"
             expressionText(str)
         }
     }
     fun button15(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
         } else {
             val str = expression.text.toString()
             val engine:ScriptEngine = ScriptEngineManager().getEngineByName("rhino")

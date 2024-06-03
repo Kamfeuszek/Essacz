@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun button12(view: View) {
-        if(expression.text.toString().endsWith("+") || expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-") || expression.text.toString().endsWith("*") || expression.text.toString().endsWith("/") || expression.text.toString().endsWith("=") || expression.text.toString().isEmpty()) {
+        if(expression.text.toString().endsWith("Infinity") || expression.text.toString().endsWith("NaN") || expression.text.toString().endsWith("-")) {
         } else {
             val str = expression.text.toString() + "-"
             expressionText(str)
